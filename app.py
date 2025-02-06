@@ -1,6 +1,6 @@
 # External libraries
 import os,json
-import pymysql
+import PyMySQL
 import mysql.connector
 from flask import Flask, jsonify, request, abort,redirect, url_for, make_response
 # from hdbcli import dbapi
