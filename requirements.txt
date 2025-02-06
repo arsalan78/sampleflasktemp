@@ -1,6 +1,9 @@
-Flask==2.0.1
-PyMySQL
-pandas==1.3.3
-requests==2.26.0
-Flask-Cors==3.0.10
-cfenv==0.5.3
+Flask
+cfenv
+Flask-Cors
+hdbcli
+pandas
+requests
+sap-xssec
+pymysql
+mysql.connector
