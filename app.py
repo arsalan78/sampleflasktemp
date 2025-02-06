@@ -15,18 +15,24 @@ import uuid
 
 from sap import xssec
 
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from cfenv import AppEnv
 
 
 # Class initiated to use methods and features
-app = Flask(__name__)
-CORS(app)
+# app = Flask(__name__)
+# CORS(app)
+
 
 env = AppEnv()
 
+app = Flask(__name__)
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
+@cross_origin()
 
 #Function to redirect urls
 @app.route('/<string:function>', methods=['GET'])
