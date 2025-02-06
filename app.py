@@ -868,7 +868,7 @@ def custom_write_temp(user = None):
     return jsonify({"custom_write" : "done"})
     
 @app.route("/customtab_write/<string:user>", methods=['POST'])
-def custom_write(user=No):
+def custom_write(user=None):
     try:
         data = request.get_json()
         conn = connection_mysql()
