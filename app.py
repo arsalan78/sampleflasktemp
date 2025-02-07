@@ -727,7 +727,7 @@ def layoutmodify(user, category):
         cursor.execute(sql_delete, parameters)
 
         # SECOND STEP
-        # data = request.get_json()
+        data = request.get_json()
         sql = 'INSERT INTO ZT_NEWSLETTER_LAYOUT (POSITION, USER, QUERY, VIZ_TYPE, COMMENTS, CATEGORY_NAME, LAST_MODIFIED_ON, ADDED_ON) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)'
         for dicc in data:
             values = (dicc["POSITION"], dicc["USER"], dicc["QUERY"], dicc["VIZ_TYPE"], dicc["COMMENTS"], dicc["CATEGORY_NAME"], current_date, current_date)
